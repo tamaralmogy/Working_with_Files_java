@@ -9,7 +9,7 @@ import java.util.TreeMap;
  * When flushed, it writes the entire dictionary back to a file.
  * <p>
  * The file format has one keyword per line:
- * <pre>word:def1:def2:def3,...</pre>
+ * <pre>word:def</pre>
  * <p>
  * Note that an empty definition list is allowed (in which case the entry would have the form: <pre>word:</pre>
  *

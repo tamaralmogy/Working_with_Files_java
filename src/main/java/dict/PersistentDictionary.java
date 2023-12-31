@@ -23,7 +23,8 @@ public interface PersistentDictionary {
     /**
      * Flush the contents of the dictionary to disk and close any open files.
      * After a close, the contents are guaranteed to persist across program executions.
-     * The dictionary may not be accessed until the open method is called.
+     * The dictionary may not be accessed until the open method is called, and doing
+     * so can result in an unspecified behavior.
      *
      * @throws IOException
      */
