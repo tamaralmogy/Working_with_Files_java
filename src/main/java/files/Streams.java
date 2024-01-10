@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Streams {
@@ -17,7 +18,37 @@ public class Streams {
      */
     public static List<Byte> getQuoted(InputStream in) throws IOException {
         // TODO: Implement
-        return null;
+        List<Byte> byteList = new ArrayList<>();
+        // flags to indicate if we are inside a quote
+        boolean insideQuote = false;
+        boolean outsideQuote = true;
+        int flipped = 0;
+        int currentByte;
+        char byteToChar;
+
+        try {
+            while ((currentByte = in.read()) != -1) {
+                byteToChar = (char) currentByte;
+
+                if (byteToChar == '"' && flipped < 2) {
+                    insideQuote = !insideQuote;
+                    outsideQuote = !outsideQuote;
+                    flipped++;
+
+                } else if (insideQuote==true || outsideQuote==false) {
+                    
+                    byteList.add((byte) currentByte);
+                }
+            }
+            // no quotes were found 
+            if (flipped == 0) return null;
+        
+        } catch (IOException e) {
+            // Handle the exception (e.g., log, print, or rethrow)
+            e.printStackTrace();
+        }
+
+        return byteList;
     }
 
 
