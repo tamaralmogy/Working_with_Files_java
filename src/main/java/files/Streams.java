@@ -60,8 +60,28 @@ public class Streams {
      * @return The string read up to (not including) the endMark (if the endMark is not found, return up to the end of the stream).
      */
     public static String readUntil(Reader in, String endMark) throws IOException {
-        // TODO: Implement
-        return null;
+        StringBuilder temp = new StringBuilder();
+        String untilEndMark = "";
+        char byteToChar; 
+        int currentByte;
+
+        try {
+            while ((currentByte = in.read()) != -1) {
+                byteToChar = (char)currentByte;
+                if (byteToChar == '\n') {
+                    break;
+                }
+                temp.append((char)byteToChar);
+            }
+            // find endMark's index and remove everything it & all after
+            int endMarkIndex = temp.indexOf(endMark);
+            untilEndMark = temp.substring(0, endMarkIndex);
+
+        } catch (IOException e) {
+            // Handle the exception (e.g., log, print, or rethrow)
+            e.printStackTrace();
+        }
+        return untilEndMark;
     }
 
     /**

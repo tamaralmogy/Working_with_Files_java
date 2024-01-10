@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="files.StreamsTest" tests="8" skipped="0" failures="6" errors="0" timestamp="2024-01-10T14:07:06" hostname="DESKTOP-V72GTUR" time="0.056">
+<testsuite name="files.StreamsTest" tests="8" skipped="0" failures="4" errors="0" timestamp="2024-01-10T14:34:07" hostname="DESKTOP-V72GTUR" time="0.062">
   <properties/>
-  <testcase name="testReadNumberExtended" classname="files.StreamsTest" time="0.007">
+  <testcase name="testReadNumberExtended" classname="files.StreamsTest" time="0.006">
     <failure message="java.lang.AssertionError: Failed random test with length 189 expected:&lt;202953117742&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Failed random test with length 189 expected:&lt;202953117742&gt; but was:&lt;0&gt;
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -106,61 +106,9 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="testGetQuotedExtended" classname="files.StreamsTest" time="0.015"/>
-  <testcase name="testReadUntil" classname="files.StreamsTest" time="0.0">
-    <failure message="java.lang.AssertionError: expected:&lt;This is a test&lt;end|nope&gt; but was:&lt;null&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;This is a test&lt;end|nope&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at files.StreamsTest.testReadUntil(StreamsTest.java:119)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <testcase name="testFilterOut" classname="files.StreamsTest" time="0.003">
+  <testcase name="testGetQuotedExtended" classname="files.StreamsTest" time="0.013"/>
+  <testcase name="testReadUntil" classname="files.StreamsTest" time="0.0"/>
+  <testcase name="testFilterOut" classname="files.StreamsTest" time="0.004">
     <failure message="array lengths differed, expected.length=20 actual.length=0; arrays first differed at element [0]; expected:&lt;97&gt; but was:&lt;end of array&gt;" type="org.junit.internal.ArrayComparisonFailure">array lengths differed, expected.length=20 actual.length=0; arrays first differed at element [0]; expected:&lt;97&gt; but was:&lt;end of array&gt;
 	at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:89)
 	at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)
@@ -221,59 +169,8 @@ Caused by: java.lang.AssertionError: expected:&lt;97&gt; but was:&lt;end of arra
 	... 49 more
 </failure>
   </testcase>
-  <testcase name="testReadUntilExtended" classname="files.StreamsTest" time="0.021">
-    <failure message="java.lang.AssertionError: Failed random sequence of characters with random endmark expected:&lt;�ᤦ㗄⽀⻥Ⓟꏾ賚叻䢗낌曾鋖㬐겧ꥣ䳶㝚用芗ҭ⮈�纔䒫쐟약ꃬ踃廣寧襌�ﭟ�敀댘㤄腽쉨䑹쳦ﮭ䲹塟椀鈔瞫㏏过Წସ╖₿㑘攚⧽豛敕�嶑蘞ᄞཿ丫‌ά謙샮⡔䖅첋摙Ⱊ䘓矔鷒�䝣蚦诙倨卬ᴾﱁⲑ沈爭ꦺ㠟仟귱킴㲵ゞ吟ꠇ넹﵏Ȯ啡賺⴨᳈�쁁傃ⷢ꒶ꂤﾽ㭠㽵㚣⽼멍얀췉᧦�嵪꣚臨䠱㚌⟯㘱㡔唈⷗멚巂¡搕琤⸳햗鴝佝잗䲴␬㗰轪蚝젛䏞ⴠ糝볩벣拳뿱䆗灃幣嫀蜏耀鵥锾䰀鴔횛ꖀ絕㈁ޡ녿錔㮰⎄༓봨﹌ꨖ閮퍝篡曔죧ᄛ蒾晱顰ក쉥Ǡ孊햃挑㍢噃㟂㶚ᘩ閱﹌ꍢ鵳�ഽ藫꾉仵ಁ節얏뫩謏耣毦唂騩⯇�챦緺ウ⒮牎紉萧џ:霺毢ᨕꅚ�馪�淛厇졩율㈞歋䉰厙ૼ⌈Չ⼔푚츟␀㭙꥗眷릚奷폵꠼眉깶燑垮ⱌꂸ䐇獅ꐅ뗄㋐ᶫꤟᗲ㔺倐萒刌粁�ᓚ맳╣꿞泂硤ᇓ卭窱鱫�먬ޛ琢᯳钧ﯤ⧺쨗荴⥦㶯೽胗ꟻ攮糉嚈왎皶띘ˑ檇㱰&#9;濈렽雇샚큎袜菪䴔ꢩ笏渤艍㽮렐餧뤕╟㛥惡뙠碌鴎䈵豫Ⱶ䓺蘅⩹꒮흡粎&gt; but was:&lt;null&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Failed random sequence of characters with random endmark expected:&lt;�ᤦ㗄⽀⻥Ⓟꏾ賚叻䢗낌曾鋖㬐겧ꥣ䳶㝚用芗ҭ⮈�纔䒫쐟약ꃬ踃廣寧襌�ﭟ�敀댘㤄腽쉨䑹쳦ﮭ䲹塟椀鈔瞫㏏过Წସ╖₿㑘攚⧽豛敕�嶑蘞ᄞཿ丫‌ά謙샮⡔䖅첋摙Ⱊ䘓矔鷒�䝣蚦诙倨卬ᴾﱁⲑ沈爭ꦺ㠟仟귱킴㲵ゞ吟ꠇ넹﵏Ȯ啡賺⴨᳈�쁁傃ⷢ꒶ꂤﾽ㭠㽵㚣⽼멍얀췉᧦�嵪꣚臨䠱㚌⟯㘱㡔唈⷗멚巂¡搕琤⸳햗鴝佝잗䲴␬㗰轪蚝젛䏞ⴠ糝볩벣拳뿱䆗灃幣嫀蜏耀鵥锾䰀鴔횛ꖀ絕㈁ޡ녿錔㮰⎄༓봨﹌ꨖ閮퍝篡曔죧ᄛ蒾晱顰ក쉥Ǡ孊햃挑㍢噃㟂㶚ᘩ閱﹌ꍢ鵳�ഽ藫꾉仵ಁ節얏뫩謏耣毦唂騩⯇�챦緺ウ⒮牎紉萧џ:霺毢ᨕꅚ�馪�淛厇졩율㈞歋䉰厙ૼ⌈Չ⼔푚츟␀㭙꥗眷릚奷폵꠼眉깶燑垮ⱌꂸ䐇獅ꐅ뗄㋐ᶫꤟᗲ㔺倐萒刌粁�ᓚ맳╣꿞泂硤ᇓ卭窱鱫�먬ޛ琢᯳钧ﯤ⧺쨗荴⥦㶯೽胗ꟻ攮糉嚈왎皶띘ˑ檇㱰	濈렽雇샚큎袜菪䴔ꢩ笏渤艍㽮렐餧뤕╟㛥惡뙠碌鴎䈵豫Ⱶ䓺蘅⩹꒮흡粎&gt; but was:&lt;null&gt;
-	at org.junit.Assert.fail(Assert.java:89)
-	at org.junit.Assert.failNotEquals(Assert.java:835)
-	at org.junit.Assert.assertEquals(Assert.java:120)
-	at files.StreamsTest.testReadUntilExtended(StreamsTest.java:142)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:176)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
-  <testcase name="testFilterOutExtended" classname="files.StreamsTest" time="0.007">
+  <testcase name="testReadUntilExtended" classname="files.StreamsTest" time="0.029"/>
+  <testcase name="testFilterOutExtended" classname="files.StreamsTest" time="0.008">
     <failure message="Failed random test with length 189 and 173 bad bytes (bad byte was 25): array lengths differed, expected.length=16 actual.length=0; arrays first differed at element [0]; expected:&lt;46&gt; but was:&lt;end of array&gt;" type="org.junit.internal.ArrayComparisonFailure">Failed random test with length 189 and 173 bad bytes (bad byte was 25): array lengths differed, expected.length=16 actual.length=0; arrays first differed at element [0]; expected:&lt;46&gt; but was:&lt;end of array&gt;
 	at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:89)
 	at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)
