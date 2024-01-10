@@ -93,6 +93,19 @@ public class Streams {
      */
     public static void filterOut(InputStream in, OutputStream out, byte badByte) throws IOException {
         // TODO: Implement
+        int currentByte;
+
+        try {
+            while ((currentByte = in.read()) != -1) {
+                // cast currentByte to keep signed
+                if ((byte)currentByte != badByte) {
+                    out.write(currentByte);
+                }
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
