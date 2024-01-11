@@ -118,6 +118,27 @@ public class Streams {
      */
     public static long readNumber(InputStream in) throws IOException {
         // TODO: Implement
-        return 0;
+        long result = 0;
+        
+        
+        byte[] bytes = new byte[5];
+
+        // read and store into bytes array buffer
+        try {
+            int numOfBytes = in.read(bytes);
+            if (numOfBytes == 5) {
+                for (byte b : bytes) {
+                    // Shifting previous value 8 bits to right and
+                    // add it with next value
+                    result = (result << 8 | (b & 0xFFL));
+                }
+            }
+            else {
+                result = -1;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result; 
     }
 }
