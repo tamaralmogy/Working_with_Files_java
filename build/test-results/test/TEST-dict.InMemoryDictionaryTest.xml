@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dict.InMemoryDictionaryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-01-13T17:02:59" hostname="DESKTOP-V72GTUR" time="0.716">
+  <properties/>
+  <testcase name="clearTest" classname="dict.InMemoryDictionaryTest" time="0.036"/>
+  <testcase name="removeElementsInMemoryTest" classname="dict.InMemoryDictionaryTest" time="0.003"/>
+  <testcase name="fullRecallTest" classname="dict.InMemoryDictionaryTest" time="0.004"/>
+  <testcase name="fullRecallPersistentExtendedTest" classname="dict.InMemoryDictionaryTest" time="0.181"/>
+  <testcase name="fullRecallInMemoryExtendedTest" classname="dict.InMemoryDictionaryTest" time="0.052"/>
+  <testcase name="fullRecallCombinedExtendedTest" classname="dict.InMemoryDictionaryTest" time="0.121"/>
+  <testcase name="extendedCycleTest" classname="dict.InMemoryDictionaryTest" time="0.21"/>
+  <testcase name="removeElementsPersistentTest" classname="dict.InMemoryDictionaryTest" time="0.003"/>
+  <testcase name="removeElementsPersistentExtendedTest" classname="dict.InMemoryDictionaryTest" time="0.102"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
